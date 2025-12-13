@@ -1,6 +1,7 @@
 {
-  "name": "inkra",
+  "name": "@inkra/starter",
   "version": "0.1.0",
+  "description": "A modern, production-ready starter template with Next.js 16 Canary, Better Auth, PostgreSQL via Drizzle ORM, and Biome for linting and formatting.",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -12,9 +13,6 @@
     "drizzle:push": "bunx --bun drizzle-kit push --config src/lib/db/drizzle.config.ts"
   },
   "dependencies": {
-    "@ai-sdk/openai": "^3.0.0-beta.90",
-    "@ai-sdk/react": "^3.0.0-beta.148",
-    "ai": "^6.0.0-beta.145",
     "better-auth": "^1.4.6",
     "drizzle-orm": "^0.45.1",
     "next": "16.1.0-canary.16",

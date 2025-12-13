@@ -1,36 +1,131 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Inkra Starter
 
-## Getting Started
+A production-ready starter template for building full-stack applications with Next.js 16 Canary, Better Auth, PostgreSQL, and Bun.
 
-First, run the development server:
+## Overview
+
+This template provides a solid foundation for full-stack development with industry-standard technologies pre-configured and ready to use.
+
+### Included Technologies
+
+- **Next.js 16 Canary** - Latest React framework with App Router
+- **Bun** - Fast JavaScript runtime and package manager
+- **Better Auth** - Complete authentication solution
+- **PostgreSQL** - Relational database
+- **Drizzle ORM** - Type-safe SQL ORM for edge runtimes
+- **Tailwind CSS 4** - Utility-first CSS framework
+- **Biome** - Code formatter and linter
+- **TypeScript** - Type-safe JavaScript
+
+## Quick Start
+
+### Prerequisites
+
+- Bun (latest version)
+- PostgreSQL database
+
+### Installation
+
+1. Clone the repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <your-repo-url>
+cd inkra
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+bun install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Configure environment variables:
 
-## Learn More
+```bash
+cp .env.example .env.local
+```
 
-To learn more about Next.js, take a look at the following resources:
+Configure your PostgreSQL connection string and required secrets in `.env.local`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Initialize the database:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+bun run drizzle:generate
+bun run drizzle:push
+```
 
-## Deploy on Vercel
+5. Start development:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+bun run dev
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The application will be available at http://localhost:3000.
+
+## Scripts
+
+| Command                    | Purpose                       |
+| -------------------------- | ----------------------------- |
+| `bun run dev`              | Start development server      |
+| `bun run build`            | Build for production          |
+| `bun run start`            | Start production server       |
+| `bun run lint`             | Check code quality with Biome |
+| `bun run format`           | Format code with Biome        |
+| `bun run drizzle:generate` | Generate database migrations  |
+| `bun run drizzle:push`     | Apply database migrations     |
+
+## Authentication
+
+Better Auth provides a complete authentication system with:
+
+- User registration and login
+- Session management
+- Built-in security measures
+- OAuth provider support
+
+Configuration is handled in `src/lib/auth.ts`. Refer to the Better Auth documentation for advanced setup options.
+
+## Database
+
+Database schema and migrations are managed through Drizzle ORM. Schema files are located in `src/lib/db/schema/`.
+
+To add new tables:
+
+1. Update your schema files
+2. Run `bun run drizzle:generate` to create migrations
+3. Run `bun run drizzle:push` to apply changes
+
+## Styling
+
+Tailwind CSS 4 is configured and ready to use. Customize the design system through `tailwind.config.ts`.
+
+## Code Quality
+
+Biome handles formatting and linting across JavaScript, TypeScript, and JSON:
+
+```bash
+bun run lint      # Check code quality
+bun run format    # Auto-format code
+```
+
+## Environment Configuration
+
+Required environment variables in `.env.local`:
+
+```
+DATABASE_URL=postgresql://user:password@localhost:5432/inkra
+BETTER_AUTH_SECRET=your-secret-key
+```
+
+## Documentation
+
+- Next.js: https://nextjs.org/docs
+- Better Auth: https://better-auth.dev
+- Drizzle ORM: https://orm.drizzle.team
+- Tailwind CSS: https://tailwindcss.com/docs
+- Bun: https://bun.sh/docs
+- Biome: https://biomejs.dev
+
+## License
+
+MIT
