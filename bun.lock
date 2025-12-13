@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "inkra",
+      "name": "bunrift",
       "dependencies": {
         "better-auth": "^1.4.6",
         "drizzle-orm": "^0.45.1",

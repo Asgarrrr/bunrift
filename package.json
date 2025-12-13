@@ -1,5 +1,5 @@
 {
-  "name": "@inkra/starter",
+  "name": "bunrift",
   "version": "0.1.0",
   "description": "A modern, production-ready starter template with Next.js 16 Canary, Better Auth, PostgreSQL via Drizzle ORM, and Biome for linting and formatting.",
   "private": true,

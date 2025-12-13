@@ -1,4 +1,4 @@
-# Inkra Starter
+# bunrift
 
 A production-ready starter template for building full-stack applications with Next.js 16 Canary, Better Auth, PostgreSQL, and Bun.
 
@@ -30,7 +30,7 @@ This template provides a solid foundation for full-stack development with indust
 
 ```bash
 git clone <your-repo-url>
-cd inkra
+cd bunrift
 ```
 
 2. Install dependencies:
@@ -113,7 +113,7 @@ bun run format    # Auto-format code
 Required environment variables in `.env.local`:
 
 ```
-DATABASE_URL=postgresql://user:password@localhost:5432/inkra
+DATABASE_URL=postgresql://user:password@localhost:5432/your-database
 BETTER_AUTH_SECRET=your-secret-key
 ```
 
