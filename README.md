@@ -1,6 +1,6 @@
 # bunrift
 
-A production-ready starter template for building full-stack applications with Next.js 16 Canary, Better Auth, PostgreSQL, and Bun.
+A production-ready opinionated starter template for building full-stack applications with Next.js 16 Canary, Better Auth, PostgreSQL, and Bun.
 
 ## Overview
 
@@ -29,7 +29,7 @@ This template provides a solid foundation for full-stack development with indust
 1. Clone the repository:
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Asgarrrr/bunrift
 cd bunrift
 ```
 
