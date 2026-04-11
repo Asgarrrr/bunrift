@@ -15,7 +15,7 @@
   "dependencies": {
     "better-auth": "^1.4.6",
     "drizzle-orm": "^0.45.1",
-    "next": "16.1.7",
+    "next": "16.2.3",
     "postgres": "^3.4.7",
     "react": "19.2.1",
     "react-dom": "19.2.1"
